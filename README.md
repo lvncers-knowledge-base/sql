@@ -109,3 +109,43 @@ SELECT * FROM student LIMIT 1 OFFSET 3;
 +----+------------+------------+-------+
 1 row in set (0.000 sec)
 ```
+
+### エイリアスをつける
+
+```sql
+SELECT name AS 名前 FROM student;
+```
+
+```sql
+SELECT name 名前 FROM student;
+```
+
+```sh
++---------------+
+| 名前          |
++---------------+
+| 佐藤 琢磨      |
+| 大塚 愛　      |
+| 藤井 隆　      |
+| 福原 愛　      |
+| 大黒 将志      |
++---------------+
+5 rows in set (0.000 sec)
+```
+
+### 重複排除
+
+```sql
+SELECT DISTINCT class FROM student;
+```
+
+```sh
++-------+
+| class |
++-------+
+| CG    |
+| Web   |
+| NULL  |
++-------+
+3 rows in set (0.000 sec)
+```
